@@ -1,0 +1,151 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    background: black;
+}
+
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+}
+
+
+
+
+.card {
+    position: absolute;
+    width: 400px;
+    height: 250px;
+    perspective: 900px;
+}
+
+.card-content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: transform 2s;
+    transform-style: preserve-3d;
+    
+}
+
+.card:hover .card-content {
+    transform: rotateY(180deg);
+    transition: transform 1s;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+    padding: 1.5rem 0;
+    box-shadow: 0 0 4px;
+}
+
+.card-front {
+    background: white;
+    padding: 1.5rem;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background: rgb(177, 178, 178);
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem 0 0 0;
+}
+
+.card-numbers {
+    display: flex;
+    justify-content: space-between;
+    font-size: xx-large;
+    line-height: 0;
+    font-weight: 400;
+    font-stretch: expanded;
+}
+
+.card-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mastercard-logo {
+    width: 3.5rem;
+    height: 3rem;
+}
+
+.card-owner {
+    font-weight: 600;
+    font-size: larger;
+}
+
+
+.card-chip-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.card-chip {
+    width: 3.5rem;
+
+}
+
+.card-contactless {
+    width: 2.5rem;
+    margin-left: 1rem;
+    
+}
+
+.black-line {
+    height: 3rem;
+    background: black;
+}
+
+.ccv {
+    text-align: end;
+    font-size: small;
+}
+
+.card-details {
+    background: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-align: end;
+    color: black;
+    margin-bottom: 0.5rem;
+}
+
+.card-details-wrapper {
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-info {
+    font-size: small;
+}
+
+.expiry-date {
+    font-size: small;
+    line-height: 0;
+}
+
+span {
+    font-size: large;
+}
+
+.bank-logo {
+    width: 8rem;
+    height:auto;
+}
+
+.bank-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
